@@ -14,6 +14,7 @@ export const searchRobots = (state = initialStateSearch, action = {}) => {
     case CHANGE_SEARCH_FIELD:
       return { ...state, searchField: action.payload };
     default:
+      // console.log('returned state for searchRobots reducers');
       return state;
   }
 }
@@ -33,6 +34,7 @@ export const requestRobots = (state = initialStateRobots, action = {}) => {
     case REQUEST_ROBOTS_FAILED:
       return { ...state, error: action.payload, isPending: false };
     default:
+      // console.log('returned state for requestRobots reducers');
       return state;
   }
 }
